@@ -1,56 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Portfolio</title>
+    <style>
+        .middle {
+            margin: 0 10%;
+            padding: 120px 0;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.3rem;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 2rem;
+        }
+
+        h3 {
+            margin-top: 10px;
+            font-size: 1.6rem;
+        }
+
+        .item {
+            flex: 0 0 40%;
+            text-align: center;
+            margin: auto;
+            font-size: larger;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-content: stretch;
+            align-items: flex-start;
+            margin-top: auto;
+        }
+
+        .flex-item:nth-child(1) {
+            order: 0;
+            flex: 0 1 auto;
+            align-self: auto;
+        }
+
+        .flex-item:nth-child(2) {
+            order: 0;
+            flex: 0 1 auto;
+            align-self: auto;
+        }
+
+        img.item {
+            width: 40%;
+            height: auto;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 8px 0;
+
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            line-height: 50px;
+            border-radius: 30%;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .social-icon:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .social-icon i {
+            font-size: 30px;
+        }
+
+        .copyright {
+            font-size: 12px;
+            margin-top: 7px;
+        }
+
+        header {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+            text-decoration: underline;
+        }
+
+        header nav a:hover {
+            color: #333;
+        }
+
+        #about,
+        #education,
+        #projects {
+            scroll-margin-top: 150px;
+        }
+
+        @media (max-width: 800px) {
+            .flex-container {
+                flex-direction: column;
+            }
+
+            img.item {
+                width: 65%;
+                height: auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <!-- <div id="mySidebar" class="sidebar">
-            <a href="#"><i class="material-icons">info</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;About Me</span></a><br>
-            <a href="#"><i class="material-icons">spa</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Education</a>
-            <br>
-            <a href="#"><i class="material-icons">monetization_on</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Projects</a><br>
-            <a href="#"><i class="material-icons">email</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Contact</a>
-        </div> -->
-    </nav>
-    <main >
-        <article id="center-content container">
+    <header>
+        <h1>Pillar Quinn</h1>
+        <nav>
+            <p>
+                <a href="#about">About Me</a> &nbsp; &nbsp; &nbsp;
+                <a href="#education">Education</a> &nbsp; &nbsp; &nbsp;
+                <a href="#projects">Projects</a>
+            </p>
+        </nav>
+    </header>
 
-        <h1 class="name-title">ABOUT ME</h1>
-
-        <h2>Pillar Quinn</h2>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque id metus non luctus. Pellentesque
-            pretium fermentum augue. Maecenas odio mi, cursus sit amet massa sit amet, accumsan porta purus. </p>
-        <p><br> Varius euismod lacus lacinia lacinia. Phasellus id euismod eros. Suspendisse eget ipsum felis. Duis
-            magna ante, mollis id erat a, convallis rutrum purus. </p>
-        <img src="headshot.jpg" alt="Photo of Pillar Quinn">
-        </article>
-        <article id="center-content container">
-            <h1 class="name-title" >Education</h1>
-            <div class="skinny container">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque id metus non luctus. Pellentesque
-                pretium fermentum augue. Maecenas odio mi, cursus sit amet massa sit amet, accumsan porta purus. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque id metus non luctus. Pellentesque
-                    pretium fermentum augue. Maecenas odio mi, cursus sit amet massa sit amet, accumsan porta purus. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque id metus non luctus. Pellentesque
-                        pretium fermentum augue. Maecenas odio mi, cursus sit amet massa sit amet, accumsan porta purus. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque id metus non luctus. Pellentesque
-                            pretium fermentum augue. Maecenas odio mi, cursus sit amet massa sit amet, accumsan porta purus. </p>
+    <div class="middle">
+        <h2 class="title" id="about">About Me</h2>
+        <div class="flex-container">
+            <img src="headshot.jpg" alt="A photo" class="item">
+            <div class="item">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
             </div>
-        </article>
-        <footer>
-            <a id="idLinkedInIcon" href="www.linkedin.com"><span>in</span></a>
-            <a id="github" href="github.com"> <span><img src="github-logo.png" alt="Link to my github"></span></a>
-        </footer>
-    </main>
+        </div>
+        <h2 class="title" id="education">Education</h2>
+        <div class="flex-container">
+            <div class="item">
+                <p>It is a long established fact that a reader will be distrcted by the reacted by the reacted by the
+                    reacted by the reacted by the reacted by the reacted by the reacted by the reaacted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                    more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
+                    making it look like readable English. Many desktop publishing packages and web page editors now use
+                    Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites
+                    still in their infancy. Various versions have evolved over the years, sometimes by accident,
+                    sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div class="item">
+
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
+            </div>
+        </div>
+
+        <h2 class="title" id="projects">Projects</h2>
+        <h3 class=" title">Project 1</h3>
+        <div class="flex-container">
+            <div class="item">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
+            </div>
+            <div class="item">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
+            </div>
+        </div>
+        <h3 class=" title">Project 2</h3>
+        <div class="flex-container">
+            <div class="item">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
+            </div>
+            <div class="item">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    (injected humour and the like).</p>
+            </div>
+        </div>
+        <h3 class=" title">Project 3</h3>
+        <div class="flex-container">
+            <div class="item">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                    when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                    their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
+                    purpose
+                    (injected humour and the like).</p>
+            </div>
+            <div class="item">
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                    when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                    their
+                    default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
+                    infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
+                    purpose
+                    (injected humour and the like).</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/pillar-quinn/" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/pvquinn" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="copyright">&copy; 2023 Pillar Quinn <span id="year"></span></div>
+
+    </footer>
+
 </body>
 
 </html>
