@@ -1,18 +1,36 @@
 html {
-    background-color: #111111;
-    color: #CCCCCC;
+    background-color: #D8D4D5;
+    color: #1F1300;
 }
 
-#name-title {
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.name-title {
+    width: 100%;
     text-align: center;
     font-size: 4rem;
-    margin-top: 5rem;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(166, 144, 164);
+    color: #D8D4D5;
 }
 
-#center-content {
+.skinny {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.center-content {
     font-size: 1.5rem;
-    max-width: 40%;
-    margin: auto;
+    max-width: 80%;
     text-align: justify;
 }
 
@@ -41,6 +59,58 @@ img {
 
 footer {
     margin-left: auto;
+    margin-right: auto;
     margin-top: 2rem;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    
 }
+
+
+
+
+/* .sidebar {
+    height: 100%;
+    width: fit-content;
+    max-width: 15rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(166, 144, 164, 50%);
+    transition: 0.5s;
+    padding-top: 90px;
+    padding-right: 15px;
+    white-space: nowrap;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 15px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #66717E;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #D8D4D5;
+}
+
+
+.material-icons,
+.icon-text {
+    vertical-align: middle;
+}
+
+.material-icons {
+    padding-bottom: 3px;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidebar {
+        padding-top: 15px;
+    }
+} */
